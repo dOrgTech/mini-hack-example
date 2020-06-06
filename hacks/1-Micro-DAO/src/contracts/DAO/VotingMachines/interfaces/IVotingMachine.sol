@@ -18,7 +18,7 @@ interface IVotingMachine {
 
   event ProposalExecuted(
     bytes32 indexed _proposalId,
-    uint256 _winningChoice,
+    uint256[] _winningChoices,
     uint256 _totalCredits
   );
 
