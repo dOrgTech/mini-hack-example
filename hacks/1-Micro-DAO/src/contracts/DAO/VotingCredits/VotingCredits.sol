@@ -1,9 +1,10 @@
 pragma solidity ^0.6.8;
 
 import "./VotingCreditsFactory.sol";
+import "./interfaces/IVotingCredits.sol";
 import "./lib/MiniMeToken.sol";
 
-contract VotingCredits is MiniMeToken {
+contract VotingCredits is IVotingCredits, MiniMeToken {
   /// @notice Constructor to create a VotingCredits
   /// @param _tokenFactory The address of the VotingCreditsFactory contract that
   ///  will create the Clone token contracts, the token factory needs to be
@@ -34,16 +35,6 @@ contract VotingCredits is MiniMeToken {
     creationBlock = block.number;
   }
 
-  /// @notice Creates a new clone token with the initial distribution being
-  ///  this token at `_snapshotBlock`
-  /// @param _cloneTokenName Name of the clone token
-  /// @param _cloneDecimalUnits Number of decimals of the smallest unit
-  /// @param _cloneTokenSymbol Symbol of the clone token
-  /// @param _snapshotBlock Block when the distribution of the parent token is
-  ///  copied to set the initial distribution of the new clone token;
-  ///  if the block is zero than the actual block, the current block is used
-  /// @param _transfersEnabled True if transfers are allowed in the clone
-  /// @return The address of the new MiniMeToken Contract
   function createCloneToken(
     string _cloneTokenName,
     uint8 _cloneDecimalUnits,

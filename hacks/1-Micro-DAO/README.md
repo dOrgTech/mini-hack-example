@@ -15,7 +15,7 @@ I'd like to create a Minimum Viable DAO with as little custom code as possible, 
 In order to do this, I've taken heavy inspiration from DAOstack's Arc contracts, and Gnosis's Safe contracts, and Jordi Baylina's MiniMe Token.
 
 ## Time-Frame
-5 hours
+15 hours
 
 ## Details
 ### Core Contracts
@@ -31,3 +31,7 @@ In order to do this, I've taken heavy inspiration from DAOstack's Arc contracts,
 
 ## Closing Notes
 TODO notes about where I didn't get a chance to take it
+
+TODO: future goals for interface versions
+TODO: future goals about this right here IVotingCredits votingCredits @ hash("mini-dao/voting-credits-v1")
+TODO: future goal for interface specific initializers
