@@ -27,7 +27,7 @@ In order to do this, I've taken heavy inspiration from DAOstack's Arc contracts,
 ## Closing Notes
 This project is left in a very incomplete and experimental state. Here are some things I'd like to do in the future:  
 - Recreate MiniMe using OpenZeppelin primitives.  
-- Finish and use the newly refactored [IVotingMachine](./src/contracts/DAO/VotingMachines/IVotingMachine.sol) interface for the voting machines.  
+- Finish and use the newly refactored [IVotingMachine](./src/contracts/DAO/VotingMachines/interfaces/IVotingMachine.sol) interface for the voting machines.  
   - Improve the interface to handle nonces & signature digests in a uniform way.  
   - Find a generic way to handle both msg.sender & signature based executions in a single function signature. This would reduce code bloat.  
 - Move the "Generic Multi Call" proposal functionality out of the DAO smart contract, and utilize a modules pattern for all desired additive functionality.  
