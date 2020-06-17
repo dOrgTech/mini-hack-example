@@ -125,29 +125,9 @@ interface IVotingMachine {
     bytes32 _proposalId,
     uint256 _choice
   )
+  external
   votable(_proposalId)
-  validProposalChoice(_choice)
-  external;
-
-  // TODO: use batch signatures for all
-  // TODO: define digests here?
-  /**
-    * @dev Batch revert votes.
-    * and delete the voter from the proposal struct
-    * @param _proposalId id of the proposal
-    */
-  function revertVoteWithSigs(
-    bytes32[] _proposalIds,
-    uint256[] _choices,
-    address[] _signers,
-    uint256[] _nonces,
-    uint8[] _v,
-    bytes32[] _r,
-    bytes32[] _s
-  )
-  votable(_proposalIds)
-  validProposalChoice(_proposalIds, _choices)
-  external;
+  validProposalChoice(_choice);
 
   /**
     * @dev execute the proposal (if it's been decided)
@@ -162,6 +142,12 @@ interface IVotingMachine {
   returns(
     bool proposalExecuted
   );
+
+  ///////////////////////////////
+  /// PRE-SIGNED TRANSACTIONS ///
+  ///////////////////////////////
+
+  // TODO: define digests here?
 
   /**
     * @dev Signer will create a new proposal. Every proposal has a unique ID.
@@ -224,64 +210,22 @@ interface IVotingMachine {
   );
 
   /**
-    * @dev Batch create proposals. Every proposal has a unique ID.
-    * @param _numChoices number of choices
-    * @return proposalIds - The new proposal IDs.
+    * @dev Signer will revert their vote.
+    * and delete the voter from the proposal struct
+    * @param _proposalId id of the proposal
     */
-  function createProposalBatch(
-    uint256[] _numChoices,
-    address[] _signers,
-    uint256[] _nonces,
-    uint8[] _v,
-    bytes32[] _r,
-    bytes32[] _s
-  )
-  external
-  returns(
-    bytes32 proposalIds[]
-  );
-
-  /**
-    * @dev Batch revert proposals.
-    * @param _proposalIds id of the proposals
-    * @return bool proposalsReverted - If the proposals have been reverted.
-    */
-  function revertProposalBatch(
-    bytes32[] _proposalIds,
-    address[] _signers,
-    uint256[] _nonces,
-    uint8[] _v,
-    bytes32[] _r,
-    bytes32[] _s
-  )
-  external
-  returns(
-    bool[] proposalReverted
-  );
-
-  /**
-    * @dev Batch vote for proposal choices.
-    * @param _proposalIds id of the proposals
-    * @param _choices a value between 0 to and the proposal's number of choices.
-    * @param _credits the amount of credits to vote with. if _amount == 0 it will use all voter credits.
-    * @return bool proposalExecuted - If the proposal has been executed.
-    */
-  function voteBatch(
-    bytes32[] _proposalIds,
-    uint256[] _choices,
-    uint256[] _credits,
-    address[] _signers,
-    uint256[] _nonces,
-    uint8[] _v,
-    bytes32[] _r,
-    bytes32[] _s
+  function revertVote(
+    bytes32 _proposalId,
+    uint256 _choice,
+    address _signer,
+    uint256 _nonce,
+    uint8 _v,
+    bytes32 _r,
+    bytes32 _s
   )
   external
   votable(_proposalId)
-  validProposalChoice(_choice)
-  returns(
-    bool proposalExecuted
-  );
+  validProposalChoice(_choice);
 
   /////////////
   /// VIEWS ///
