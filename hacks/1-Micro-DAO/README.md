@@ -19,15 +19,15 @@ In order to do this, I've taken heavy inspiration from DAOstack's Arc contracts,
 
 ## Components
 [DAO](./src/contracts/DAO/DAO.sol) - A simple contract that allows VotingCredits holders to vote on propoosals using a voting machine. These proposals are for a collection of executable calldatas.  
-[VotingCredits](./src/contracts/VotingCredits/VotingCredits.sol) - A non-transferable MiniMe token.  
-[VotingMachines](./src/contracts/VotingMachines) - A fork of [DAOstack's infra voting machines](https://github.com/daostack/infra).  
-[IVotingMachine](./src/contracts/VotingMachines/IVotingMachine.sol) - A refactor of [DAOstack's IVotingMachine interface](https://github.com/daostack/infra/blob/master/contracts/votingMachines/IntVoteInterface.sol).  
+[VotingCredits](./src/contracts/DAO/VotingCredits/VotingCredits.sol) - A non-transferable MiniMe token.  
+[VotingMachines](./src/contracts/DAO/VotingMachines) - A fork of [DAOstack's infra voting machines](https://github.com/daostack/infra).  
+[IVotingMachine](./src/contracts/DAO/VotingMachines/interfaces/IVotingMachine.sol) - A refactor of [DAOstack's IVotingMachine interface](https://github.com/daostack/infra/blob/master/contracts/votingMachines/IntVoteInterface.sol).  
 [Registry](./src/contracts/Registry/OwnedItemRegistry.sol) - A fork of Level-K's ["Registry Builder"](https://github.com/levelkdev/registry-builder).  
 
 ## Closing Notes
 This project is left in a very incomplete and experimental state. Here are some things I'd like to do in the future:  
 - Recreate MiniMe using OpenZeppelin primitives.  
-- Finish and use the newly refactored [IVotingMachine](./src/contracts/VotingMachines/IVotingMachine.sol) interface for the voting machines.  
+- Finish and use the newly refactored [IVotingMachine](./src/contracts/DAO/VotingMachines/IVotingMachine.sol) interface for the voting machines.  
   - Improve the interface to handle nonces & signature digests in a uniform way.  
   - Find a generic way to handle both msg.sender & signature based executions in a single function signature. This would reduce code bloat.  
 - Move the "Generic Multi Call" proposal functionality out of the DAO smart contract, and utilize a modules pattern for all desired additive functionality.  
