@@ -1,4 +1,5 @@
-# dOrg Mini Hack Challenge
+# dOrg Activation Challenge
+> Join dOrg by doing what you're best at!
 
 [More Information Here](https://docs.dorg.tech/getting-started/activation)
 
