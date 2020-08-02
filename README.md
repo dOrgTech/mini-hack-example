@@ -1,7 +1,7 @@
 # dOrg Activation Challenge
 > Join dOrg by doing what you're best at!
 
-[More Information Here](https://docs.dorg.tech/getting-started/activation)
+[More Information Here](https://docs.dorg.tech/lifecycle/activation)
 
 ## Examples
 1. [Micro DAO](./hacks/1-Micro-DAO/) by @dOrgJelli
