@@ -12,6 +12,8 @@
 6. [Wallet Balance Data Science Notebook](https://www.linkedin.com/pulse/exploring-ethereum-blockchain-bigquery-python-henriquez-perozo/?trackingId=voaeJu9BSjmJJuuSszPpGA%3D%3D) by @rihp
 7. [Prototype for Decentralized Finance of On-the-Ground Communities](https://docs.google.com/document/d/1DX0P21g2kAkAR8KwqkDbNzMcwiiKfFLDfjazvHQwx2A/edit?usp=sharing) by @magentaceiba
 8. [OpenRaise “v2”: Improvement Proposals](https://docs.google.com/document/d/1JR23RbB4XujKOCmBZM969wwpykTbBXkD0HHXRgE1xKA/edit?usp=sharing) by @PhilH
+9. [Web3API Home Page Redesign](https://drive.google.com/drive/folders/1cjWIU3T4kRsHDQC4Vcg-9iSW2fpWvQ7r) by duvan
+10. [Voter Participation Visualizer](https://github.com/c0rv0s/voter-participation) by @c0rv0s
 
 ## Additional Ideas
 - **Visualization** of dOrg proposal, token or Rep flows
