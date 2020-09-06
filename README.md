@@ -14,6 +14,8 @@
 8. [OpenRaise “v2”: Improvement Proposals](https://docs.google.com/document/d/1JR23RbB4XujKOCmBZM969wwpykTbBXkD0HHXRgE1xKA/edit?usp=sharing) by @PhilH
 9. [Web3API Home Page Redesign](https://drive.google.com/drive/folders/1cjWIU3T4kRsHDQC4Vcg-9iSW2fpWvQ7r) by duvan
 10. [Voter Participation Visualizer](https://github.com/c0rv0s/voter-participation) by @c0rv0s
+11. [Rep Flow Visualization](https://github.com/krisbitney/RepFlowVisualization) by @krisbitney
+12. [BaseDAO](https://github.com/stan36/BaseDAO) by @stan36
 
 ## Additional Ideas
 - **Visualization** of dOrg proposal, token or Rep flows
