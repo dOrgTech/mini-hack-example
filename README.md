@@ -12,10 +12,15 @@
 6. [Wallet Balance Data Science Notebook](https://www.linkedin.com/pulse/exploring-ethereum-blockchain-bigquery-python-henriquez-perozo/?trackingId=voaeJu9BSjmJJuuSszPpGA%3D%3D) by @rihp
 7. [Prototype for Decentralized Finance of On-the-Ground Communities](https://docs.google.com/document/d/1DX0P21g2kAkAR8KwqkDbNzMcwiiKfFLDfjazvHQwx2A/edit?usp=sharing) by @magentaceiba
 8. [OpenRaise “v2”: Improvement Proposals](https://docs.google.com/document/d/1JR23RbB4XujKOCmBZM969wwpykTbBXkD0HHXRgE1xKA/edit?usp=sharing) by @PhilH
-9. [Web3API Home Page Redesign](https://drive.google.com/drive/folders/1cjWIU3T4kRsHDQC4Vcg-9iSW2fpWvQ7r) by duvan
+9. [Web3API Home Page Redesign](https://drive.google.com/drive/folders/1cjWIU3T4kRsHDQC4Vcg-9iSW2fpWvQ7r) by Duvan
 10. [Voter Participation Visualizer](https://github.com/c0rv0s/voter-participation) by @c0rv0s
 11. [Rep Flow Visualization](https://github.com/krisbitney/RepFlowVisualization) by @krisbitney
 12. [BaseDAO](https://github.com/stan36/BaseDAO) by @stan36
+13. [Video Concepts](https://docs.google.com/document/d/1QufLe3HBsSTzYp4ZSqti8_e5QIQjVZmGMeELTReNEnc/edit?usp=sharing) by @DavidWolff218
+14. [Mobility Ads DAO](https://github.com/imthatcarlos/mobility-ads-dao) by @imthatcarlos
+15. [Nation-State DAO](https://docs.google.com/document/d/1xnNpEyYUF6inGHQ0pSaP4fHu4RbNMFZBBss1jtrsHCc/edit#heading=h.u2pc3nknvizc) by @marsrobertson
+16. [Decentralized Autonomous Record Network](https://docs.google.com/document/d/1dieQq5R2uONbdGNZc99M5pHbfP4jVMJ6q8f2UHf-MU0/edit) by Bernardo
+17. [Virtual Game Items](https://github.com/Remscar/dOrg-Activation) by @Remscar
 
 ## Additional Ideas
 - **Visualization** of dOrg proposal, token or Rep flows
