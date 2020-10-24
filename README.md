@@ -1,33 +1,39 @@
-# dOrg Activation Challenge
-> Join dOrg by doing what you're best at!
+# Micro DAO
+## Personal Intro
+Hi my name is Jordan Ellis (dOrgJelli). I'm a human who loves to collaborate with others humans at dOrg.
 
-[More Information Here](https://docs.dorg.tech/lifecycle/activation)
+Things I've done:
+- [GitHub](https://github.com/dOrgJelli)
+- [Twitter](https://twitter.com/dOrgJelli)
+- [LinkedIn](https://www.linkedin.com/in/jordancellis/)
+- [A Project From DigiPen](https://games.digipen.edu/games/rafflesia)
+- [A Project From Microsoft](https://www.moog.com/news/operating-group-news/2019/Moog_Inc_Microsoft_Air_New_Zealand_ST_Engineering_Microsoft_Air_New_Zealand_and_ST_Engineering_Announce_Ground_Breaking_Digital_Collaboration.html)
 
-## Examples
-1. [Micro DAO](./hacks/1-Micro-DAO/) by @dOrgJelli
-2. [Agent Availability Bot](https://github.com/dOrgTech/AgentAvailability/) by @benefacto
-3. [Proposal Listening Bot](https://github.com/linus-stark/dOrg_activation) by @linus-stark
-4. [Decentralized Product Management Spec](https://docs.google.com/document/d/1r3SYoIONQ3pWmyFLaUE68XIvpwC1tcOv9ABPxguHFzk/edit) by @jessebmiller
-5. [DAO Launcher Tutorial](https://twitter.com/Ingalandia/status/1237525857981218816) by @inglandia
-6. [Wallet Balance Data Science Notebook](https://www.linkedin.com/pulse/exploring-ethereum-blockchain-bigquery-python-henriquez-perozo/?trackingId=voaeJu9BSjmJJuuSszPpGA%3D%3D) by @rihp
-7. [Prototype for Decentralized Finance of On-the-Ground Communities](https://docs.google.com/document/d/1DX0P21g2kAkAR8KwqkDbNzMcwiiKfFLDfjazvHQwx2A/edit?usp=sharing) by @magentaceiba
-8. [OpenRaise “v2”: Improvement Proposals](https://docs.google.com/document/d/1JR23RbB4XujKOCmBZM969wwpykTbBXkD0HHXRgE1xKA/edit?usp=sharing) by @PhilH
-9. [Web3API Home Page Redesign](https://drive.google.com/drive/folders/1cjWIU3T4kRsHDQC4Vcg-9iSW2fpWvQ7r) by Duvan
-10. [Voter Participation Visualizer](https://github.com/c0rv0s/voter-participation) by @c0rv0s
-11. [Rep Flow Visualization](https://github.com/krisbitney/RepFlowVisualization) by @krisbitney
-12. [BaseDAO](https://github.com/stan36/BaseDAO) by @stan36
-13. [Video Concepts](https://docs.google.com/document/d/1QufLe3HBsSTzYp4ZSqti8_e5QIQjVZmGMeELTReNEnc/edit?usp=sharing) by @DavidWolff218
-14. [Mobility Ads DAO](https://github.com/imthatcarlos/mobility-ads-dao) by @imthatcarlos
-15. [Nation-State DAO](https://docs.google.com/document/d/1xnNpEyYUF6inGHQ0pSaP4fHu4RbNMFZBBss1jtrsHCc/edit#heading=h.u2pc3nknvizc) by @marsrobertson
-16. [Decentralized Autonomous Record Network](https://docs.google.com/document/d/1dieQq5R2uONbdGNZc99M5pHbfP4jVMJ6q8f2UHf-MU0/edit) by Bernardo
-17. [Virtual Game Items](https://github.com/Remscar/dOrg-Activation) by @Remscar
+## Description
+I'd like to create a Minimum Viable DAO with as little custom code as possible, utilizing already existing building blocks. This DAO must be extendable for any use-case you can imagine.
 
-## Additional Ideas
-- **Visualization** of dOrg proposal, token or Rep flows
-- Simple **front-end** for interacting with the dOrg DAO
-- Minimum viable DAO **smart contract**
-- Wireframe **design** for a new DAO dashboard
-- **Product** spec for a new web3 tool
-- Short **research** report on DAO frameworks
-- **Business** plan for DAO adoption in a particular sector/use-case
-- Article, video, artwork or any type of **content** that explains DAOs or dOrg to a general audience.
+In order to do this, I've taken heavy inspiration from DAOstack's Arc contracts, and Gnosis's Safe contracts, and Jordi Baylina's MiniMe Token.
+
+## Time-Frame
+15 hours
+
+## Components
+[DAO](./src/contracts/DAO/DAO.sol) - A simple contract that allows VotingCredits holders to vote on propoosals using a voting machine. These proposals are for a collection of executable calldatas.  
+[VotingCredits](./src/contracts/DAO/VotingCredits/VotingCredits.sol) - A non-transferable MiniMe token.  
+[VotingMachines](./src/contracts/DAO/VotingMachines) - A fork of [DAOstack's infra voting machines](https://github.com/daostack/infra).  
+[IVotingMachine](./src/contracts/DAO/VotingMachines/interfaces/IVotingMachine.sol) - A refactor of [DAOstack's IVotingMachine interface](https://github.com/daostack/infra/blob/master/contracts/votingMachines/IntVoteInterface.sol).  
+[Registry](./src/contracts/Registry/OwnedItemRegistry.sol) - A fork of Level-K's ["Registry Builder"](https://github.com/levelkdev/registry-builder).  
+
+## Closing Notes
+This project is left in a very incomplete and experimental state. Here are some things I'd like to do in the future:  
+- Recreate MiniMe using OpenZeppelin primitives.  
+- Finish and use the newly refactored [IVotingMachine](./src/contracts/DAO/VotingMachines/interfaces/IVotingMachine.sol) interface for the voting machines.  
+  - Improve the interface to handle nonces & signature digests in a uniform way.  
+  - Find a generic way to handle both msg.sender & signature based executions in a single function signature. This would reduce code bloat.  
+- Move the "Generic Multi Call" proposal functionality out of the DAO smart contract, and utilize a modules pattern for all desired additive functionality.  
+  - Maybe use the diamond contract pattern?
+- Create a test scenario of a DAO that manages a registry.
+- Implement a standard upgrade & versioning pattern for all components.  
+  - Version upgrades should respect interfaces, and be able to deprecate old + introduce new.  
+- Interface specific initializers.
+  - This way a user can understand what interfaces are being used, what initializers those require, and if they have all been called meaning the contract / system is fully initialized.  
